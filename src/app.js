@@ -4,8 +4,10 @@ const locationRouter = require("./routes/location");
 const authRouter = require("./routes/auth");
 const userRouter = require("./routes/user");
 const requestRouter = require("./routes/request");
+const applymiddleware = require("./middlewares/common/applymiddleware");
 
-
+// Middlewares
+applymiddleware(app);
 
 // Routes
 app.use(locationRouter);

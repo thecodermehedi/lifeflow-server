@@ -2,7 +2,6 @@ const app = require("./src/app");
 const {port} = require("./src/config");
 const connectDB = require("./src/db/connectDB");
 const handleAllErrors = require("./src/utils/error");
-const applymiddleware = require("./src/middlewares/common/applymiddleware");
 
 // handling all unhandled routes
 app.all("*", (req, res, next) => {
@@ -12,7 +11,6 @@ app.all("*", (req, res, next) => {
 });
 
 
-applymiddleware(app);
 
 app.use(handleAllErrors);
 
