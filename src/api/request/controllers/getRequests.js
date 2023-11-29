@@ -3,7 +3,7 @@ const Request = require("../../../models/Request");
 const getRequests = async (req, res) => {
   try {
     let query = {};
-    const userMail = req?.user?.email;
+    const userMail = req?.params?.email;
     if (userMail) {
       query.email = userMail;
     }
