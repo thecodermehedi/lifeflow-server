@@ -13,6 +13,8 @@ const requestSchema = new Schema({
   time: {type: String, required: true},
   dateTime: {type: Date, required: true},
   status: {type: String, required: true},
+  donorName: {type: String, default: ""},
+  donorMail: {type: String, default: ""},
 });
 
 const Request = model("Request", requestSchema);
