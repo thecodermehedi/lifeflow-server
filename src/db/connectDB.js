@@ -1,22 +1,21 @@
 const mongoose = require("mongoose");
-const { nodeEnv, dbPass, dbUser, dbName } = require("../config");
+const {nodeEnv, dbPass, dbUser, dbName} = require("../config");
 
 const getDbUri = () => {
   let dbUri;
-  if(nodeEnv === "development"){
-    dbUri = process.env.DB_DEV_URI;
-    dbUri = dbUri.replace("<username>", dbUser);
-    dbUri = dbUri.replace("<password>", dbPass);
-    dbUri = dbUri.replace("<dbname>", dbName)
-  }
-  else{
+  if (nodeEnv === "production") {
     dbUri = process.env.DB_PROD_URI;
     dbUri = dbUri.replace("<username>", dbUser);
     dbUri = dbUri.replace("<password>", dbPass);
-    dbUri = dbUri.replace("<dbname>", dbName)
+    dbUri = dbUri.replace("<dbname>", dbName);
+  } else {
+    dbUri = process.env.DB_DEV_URI;
+    dbUri = dbUri.replace("<username>", dbUser);
+    dbUri = dbUri.replace("<password>", dbPass);
+    dbUri = dbUri.replace("<dbname>", dbName);
   }
   return dbUri;
-}
+};
 
 const connectDB = async () => {
   try {
@@ -28,6 +27,6 @@ const connectDB = async () => {
     console.log(error);
     process.exit(1);
   }
-}
+};
 
 module.exports = connectDB;

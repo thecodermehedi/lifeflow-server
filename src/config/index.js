@@ -7,7 +7,7 @@ const config = {
   dbDevUri: process.env.DB_DEV_URI,
   dbProdUri: process.env.DB_PROD_URI,
   nodeEnv: process.env.NODE_ENV,
-  port: process.env.PORT,
+  port: process.env.PORT || 3000,
   clientUrlDev: process.env.CLIENT_URL_DEV,
   clientUrlProd: process.env.CLIENT_URL_PROD,
   clientUrlBackup: process.env.CLIENT_URL_BACKUP,

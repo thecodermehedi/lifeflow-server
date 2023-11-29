@@ -1,8 +1,9 @@
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const express = require("express");
-const morgan = require('morgan');
+const morgan = require("morgan");
 const {
+  nodeEnv,
   clientUrlDev,
   clientUrlProd,
   clientUrlBackup,
@@ -10,15 +11,26 @@ const {
 } = require("../../config");
 
 const applyMiddleWare = (app) => {
-  app.use(
-    cors({
-      origin: [clientUrlDev, clientUrlProd, clientUrlBackup, clientUrlBackup2],
+  let corsOptions;
+
+  if (nodeEnv === "production") {
+    corsOptions = {
+      origin: [clientUrlProd, clientUrlBackup, clientUrlBackup2],
       credentials: true,
-    })
-  );
+    };
+  } else {
+    corsOptions = {
+      origin: [clientUrlDev],
+      credentials: true,
+    };
+  }
+  app.use(cors(corsOptions));
   app.use(express.json());
   app.use(cookieParser());
-  app.use(morgan('dev')); // log every request to the console
+
+  if (nodeEnv === "development") {
+    app.use(morgan("dev")); // log every request to the console
+  }
 };
 
 module.exports = applyMiddleWare;
