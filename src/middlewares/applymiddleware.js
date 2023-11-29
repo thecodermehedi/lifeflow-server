@@ -29,7 +29,7 @@ const applymiddleware = (app) => {
   app.use(cookieParser());
 
   if (nodeEnv === "development") {
-    app.use(morgan("dev")); // log every request to the console
+    app.use(morgan("dev"));
   }
 };
 
