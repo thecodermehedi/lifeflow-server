@@ -4,7 +4,7 @@ const locationRouter = require("./routes/location");
 const authRouter = require("./routes/auth");
 const userRouter = require("./routes/user");
 const requestRouter = require("./routes/request");
-const applymiddleware = require("./middlewares/common/applymiddleware");
+const applymiddleware = require("./middlewares/applymiddleware");
 
 // Middlewares
 applymiddleware(app);

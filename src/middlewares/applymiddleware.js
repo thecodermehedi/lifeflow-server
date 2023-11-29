@@ -8,7 +8,7 @@ const {
   clientUrlProd,
   clientUrlBackup,
   clientUrlBackup2,
-} = require("../../config");
+} = require("../config");
 
 const applymiddleware = (app) => {
   let corsOptions;
