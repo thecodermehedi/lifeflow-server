@@ -10,7 +10,7 @@ const {
   clientUrlBackup2,
 } = require("../../config");
 
-const applyMiddleWare = (app) => {
+const applymiddleware = (app) => {
   let corsOptions;
 
   if (nodeEnv === "production") {
@@ -33,4 +33,4 @@ const applyMiddleWare = (app) => {
   }
 };
 
-module.exports = applyMiddleWare;
+module.exports = applymiddleware;

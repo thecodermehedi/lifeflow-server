@@ -1,13 +1,14 @@
 const express = require("express");
 const app = express();
-const applyMiddleWare = require("./middlewares/common/applyMiddleware");
+const applymiddleware = require("./middlewares/common/applymiddleware");
 const locationRouter = require("./routes/location");
 const authRouter = require("./routes/auth");
 const userRouter = require("./routes/user");
 const requestRouter = require("./routes/request");
 
+
 // Middleware
-applyMiddleWare(app);
+applymiddleware(app);
 
 // Routes
 app.use(locationRouter);
