@@ -3,7 +3,6 @@ const User = require("../../../models/User");
 const getTotalUsers = async (req, res) => {
   try {
     const result = await User.estimatedDocumentCount();
-    console.log(result);
     res.status(200).send({total: result});
   } catch (error) {
     console.log(error);
