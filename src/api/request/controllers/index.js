@@ -4,6 +4,7 @@ const updateReqStatus = require("./updateReqStatus");
 const deleteRequest = require("./deleteRequest");
 const updateRequest = require("./updateRequest");
 const getTotalRequests = require("./getTotalRequest");
+const getRequestsByStatus = require("./getRequestsByStatus");
 
 module.exports = {
   saveRequest,
@@ -12,4 +13,5 @@ module.exports = {
   deleteRequest,
   updateRequest,
   getTotalRequests,
+  getRequestsByStatus
 };
