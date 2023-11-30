@@ -4,9 +4,10 @@ const blogSchema = new Schema({
 
   title: String,
   description: String,
-  image: String,
+  cover: String,
   status: String,
-  
+  date: String,
+  time: String,
 });
 
 const Blog = model("Blog", blogSchema);
