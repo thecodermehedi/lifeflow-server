@@ -9,7 +9,6 @@ const removeAuthCookie = async (req, res) => {
         sameSite: nodeEnv === "production" ? "none" : "strict",
       })
       .send({success: true});
-    console.log("Cookie removed");
   } catch (error) {
     console.log(error);
     res.status(500).send({success: false});
