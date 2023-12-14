@@ -1,7 +1,9 @@
 # LifeFlow Backend Server Source Code
 
-- Base Api : https://lifeflow-server.onrender.com/api/v1
-- Server Health Check : https://lifeflow-server.onrender.com/health
+- Base API: https://lifeflow-server.onrender.com/api/v1
+- Backup API: https://lifeflow-server.vercel.app/api/v1
+- Server Health Check: https://lifeflow-server.onrender.com/health
+- Backup Health Check: https://https://lifeflow-server.vercel.app/health
 
 ## 📦 Packages
 - Mongoose
