@@ -27,8 +27,8 @@ dependencies:
     specifier: ^1.10.0
     version: 1.10.0
   stripe:
-    specifier: ^15.10.0
-    version: 15.10.0
+    specifier: ^15.12.0
+    version: 15.12.0
 
 packages:
 
@@ -735,8 +735,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /stripe@15.10.0:
-    resolution: {integrity: sha512-yM2967TDiNhmPE69R61Btx7URgRJOjAoLRvAa0dUyF5qfDMjDh4Qolr/FaZigxUzBH5/8SphkHpNS4Ie2L5RYg==}
+  /stripe@15.12.0:
+    resolution: {integrity: sha512-slTbYS1WhRJXVB8YXU8fgHizkUrM9KJyrw4Dd8pLEwzKHYyQTIE46EePC2MVbSDZdE24o1GdNtzmJV4PrPpmJA==}
     engines: {node: '>=12.*'}
     dependencies:
       '@types/node': 20.10.0
